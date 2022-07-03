@@ -40,11 +40,11 @@ Nesta aplicação existem 2 telas:
 
   1. Tela de gerar pokemon, nomeá-lo e salvar no banco de dados.
 
-    ![Gerador de pokemon](main.png)
+  ![Gerador de pokemon](main.png)
 
   2. Tela de listagem de pokemons salvos com seus repectivos nomes.
 
-    ![Gerador de pokemon](all.png)
+  ![Gerador de pokemon](all.png)
 
 ### Instalação
 
