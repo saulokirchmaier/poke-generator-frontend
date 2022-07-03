@@ -1,70 +1,119 @@
-# Getting Started with Create React App
+# Gerador de Pokemons - Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Teste monocard
 
-## Available Scripts
+### Saulo Kirchmaier Teixeira
 
-In the project directory, you can run:
+Aplicação frontend realizado como um teste para a empresa [Monocard](https://monocard.com.br/).
 
-### `npm start`
+### Teste
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### Proposta
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Criar um mini aplicatico web que gera um pokemon da geração 1 aleatório e permite nomeá-lo.
 
-### `npm test`
+#### Frontend
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Tela para gerar o pokemon
+- Tela com a lista de pokemons gerados
 
-### `npm run build`
+#### Backend
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- API:
+  1. Criar pokemons
+  2. Listar pokemons criados
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Banco de Dados
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Pokemons criados com:
+  1. id
+  2. nome
+  3. pokemonId
+  4. timestamo
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Desenvolvido frontend
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Para o frontent foi desenvolvido um app web com [React](https://pt-br.reactjs.org/).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Nesta aplicação existem 2 telas:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+  1. Tela de gerar pokemon, nomeá-lo e salvar no banco de dados.
 
-## Learn More
+    ![Gerador de pokemon](main.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  2. Tela de listagem de pokemons salvos com seus repectivos nomes.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    ![Gerador de pokemon](all.png)
 
-### Code Splitting
+### Instalação
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### Clonando o repositório
 
-### Analyzing the Bundle Size
+- Caso tenha uma chave SSH cadastrada faça um clone deste repositório com o comando no terminal:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+  ```
+  git clone git@github.com:saulokirchmaier/poke-generator-frontend.git
+  ```
 
-### Making a Progressive Web App
+- Caso não possua uma chave SSH utilize o comando a baixo no terminal:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+  ```
+  git clone https://github.com/saulokirchmaier/poke-generator-frontend.git
+  ```
 
-### Advanced Configuration
+#### Iniciando a API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Crie um arquivo `.env` na raiz do projeto com:
 
-### Deployment
+  ```
+  REACT_APP_URL=http://localhost:9000
+  REACT_APP_POKEAPI=https://pokeapi.co/api/v2/pokemon
+  ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Pelo terminal, acessse a pasta e instale as dependências de desenvolvimento:
 
-### `npm run build` fails to minify
+  ```
+  npm install
+  ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Antes de inicar a aplicação web, rode o backend da aplicação seguindo os passos [aqui](https://github.com/saulokirchmaier/poke-generator-backend) 
+
+- Com as dependências instaladas e o backend rodando, inicie a aplicação
+
+  ```
+  npm start
+  ```
+  
+  - Caso tudo ocorra bem, devera ser logado:
+
+  ```bash
+  Compiled successfully!
+
+  You can now view poke-generator-frontend in the browser.
+
+    Local:            http://localhost:3000
+    On Your Network:  http://192.168.2.116:3000
+
+  Note that the development build is not optimized.
+  To create a production build, use npm run build.
+
+  webpack compiled successfully
+
+  ```
+
+    - a aplicação pode ser acessada por `http://localhost:3000`
+
+#### Melhorias futuras
+
+  - Criar tela de edição de pokemon
+  - Criar botão de deletar pokemon
+  - Criar mensagens de resposta negativas, caso ocorra algum problema na API, ex: snackbar
+
+#### Agradecimentos
+
+Obrigado por ter testado está aplicação
+
+Um grande abraço.
+
+Saulo Kirchmaier Teixeira.
